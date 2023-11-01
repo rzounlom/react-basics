@@ -6,6 +6,7 @@ function TextInput() {
   const [submittedInput, setSubmittedInput] = useState("");
 
   const handleChange = (event) => {
+    // console.log(event);
     setText(event.target.value);
   };
 
@@ -17,7 +18,7 @@ function TextInput() {
 
   return (
     <div>
-      <input type="text" value={text} onChange={handleChange} />{" "}
+      <input type="text" name="name" value={text} onChange={handleChange} />{" "}
       <button onClick={handleSubmit}>Submit</button>
       <p>You typed: {text}</p>
       <p>You submitted: {submittedInput}</p>
